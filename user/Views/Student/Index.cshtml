@@ -1,0 +1,18 @@
+@model List<StudentDetails>
+
+<h1> Student Details </h1>
+<table class="table">
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Id</td>
+            <td>@student.Name</td>
+            <td><a href="mailto:@student.Email">@student.Email</a></td>
+        </tr>
+    }
+</table>
